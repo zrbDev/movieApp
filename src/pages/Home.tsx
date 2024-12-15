@@ -23,16 +23,6 @@ interface Movie {
 }
 
 const Home = (props: Props) => {
-  //   const [movies, setMovies] = useState([]); // Store movie data
-  //   const [loading, setLoading] = useState(false); // Loading state
-  //   const [totalResults, setTotalResults] = useState(0); // Total movies count
-  //   const [searchQuery, setSearchQuery] = useState("Pokemon"); // Search query
-  //   const [year, setYear] = useState("");
-  //   const [filterType, setFilterType] = useState(""); // Filter by type (movie, series, episode)
-  //   const [paginationModel, setPaginationModel] = useState<GridPaginationModel>({
-  //     page: 0, // İlk sayfa (0 tabanlı)
-  //     pageSize: 10, // Sayfa başına 10 öğe
-  //   });
   const dispatch = useDispatch();
 
   const {
