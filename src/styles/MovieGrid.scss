@@ -1,0 +1,77 @@
+// General Variables for Consistent Theme
+$primary-color: #0769e9; // Highlight color for selected rows
+$header-background: #f5f5f5; // Background for column headers
+$row-hover-color: #0f97f1; // Hover background color for rows
+$text-color: #333; // Default text color
+
+// Wrapper for DataGrid styling
+.data-grid-wrapper {
+  .MuiDataGrid-root {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+
+    .MuiDataGrid-cell {
+      font-size: 14px;
+      color: $text-color;
+      border-bottom: 1px solid #eee;
+
+      &:hover {
+        background-color: $row-hover-color; // Row hover effect
+        transition: background-color 0.2s;
+      }
+    }
+
+    .MuiDataGrid-columnHeaders {
+      background-color: $header-background;
+      color: $text-color;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .MuiDataGrid-row {
+      &:nth-child(odd) {
+        background-color: #fafafa; // Light zebra striping
+      }
+
+      &:nth-child(even) {
+        background-color: #fff; // Alternate zebra striping
+      }
+
+      &.Mui-selected {
+        background-color: lighten($primary-color, 40%);
+        &:hover {
+          background-color: lighten($primary-color, 30%);
+        }
+      }
+    }
+
+    .MuiDataGrid-footerContainer {
+      border-top: 1px solid #ddd;
+      background-color: #f9f9f9;
+
+      .MuiTablePagination-root {
+        font-size: 12px;
+        color: $text-color;
+      }
+
+      .MuiTablePagination-actions {
+        button {
+          color: $primary-color;
+          &:hover {
+            background-color: lighten($primary-color, 40%);
+          }
+        }
+      }
+    }
+
+    .MuiDataGrid-overlay {
+      background-color: rgba(255, 255, 255, 0.7);
+      color: $text-color;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
